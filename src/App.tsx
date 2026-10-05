@@ -4,7 +4,7 @@
  */
 
 import { useState, useRef, useEffect } from 'react';
-import { MoreVertical, Settings, Info, RefreshCw, X, Rocket, Globe, Sliders, Check } from 'lucide-react';
+import { MoreVertical, Settings, Info, RefreshCw, X, Rocket, Globe, Sliders, Check, Download, Smartphone } from 'lucide-react';
 import { SpaceCanvas } from './components/SpaceCanvas';
 import { ZeroSpaceCanvas } from './components/ZeroSpaceCanvas';
 import { CelestialDossier } from './components/CelestialDossier';
@@ -420,6 +420,35 @@ export default function App() {
                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-neutral-600" /> <span className="text-neutral-200">Zoom:</span> Scroll mouse wheel</li>
                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-neutral-600" /> <span className="text-neutral-200">Zero Space Glide:</span> Click anywhere on the ground plane</li>
                   </ul>
+                </div>
+
+                {/* APK Icon Asset Preview */}
+                <div className="p-4 bg-gradient-to-br from-indigo-950/40 via-purple-950/20 to-neutral-900/60 rounded-xl border border-indigo-500/20 flex items-center gap-4">
+                  <div className="relative group">
+                    <img 
+                      src="/src/assets/images/apk_app_icon_1791229682781.jpg" 
+                      alt="Solar System APK Icon" 
+                      referrerPolicy="no-referrer"
+                      className="w-16 h-16 rounded-2xl shadow-lg border border-white/20 object-cover shrink-0"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-white">
+                      <Smartphone className="w-3.5 h-3.5 text-indigo-400" />
+                      <span>Android APK Icon</span>
+                    </div>
+                    <p className="text-[11px] text-neutral-400 mt-0.5">
+                      High-resolution 3D cosmic launcher icon for Android APK packaging.
+                    </p>
+                    <a
+                      href="/src/assets/images/apk_app_icon_1791229682781.jpg"
+                      download="solar_system_apk_icon.jpg"
+                      className="inline-flex items-center gap-1.5 mt-2 px-2.5 py-1 bg-white/10 hover:bg-white/20 text-white rounded-lg text-[11px] font-medium transition-colors"
+                    >
+                      <Download className="w-3 h-3 text-neutral-300" />
+                      Download Icon
+                    </a>
+                  </div>
                 </div>
               </div>
 
