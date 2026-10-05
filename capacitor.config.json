@@ -1,0 +1,6 @@
+{
+  "appId": "com.specgit.app",
+  "appName": "specgit",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

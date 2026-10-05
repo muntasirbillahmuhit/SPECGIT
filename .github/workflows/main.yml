@@ -30,17 +30,23 @@ jobs:
       - name: Build web app
         run: npm run build
 
+      - name: Generate Web & PWA Icons
+        run: node scripts/generate-icons.js
+
       - name: Install Capacitor
         run: npm install @capacitor/core @capacitor/cli @capacitor/android
 
       - name: Initialize Capacitor
-        run: npx cap init "SPECGIT" "com.specgit.app" --web-dir=dist
+        run: npx cap init "specgit" "com.specgit.app" --web-dir=dist
 
       - name: Remove existing android platform
         run: rm -rf android
 
       - name: Add Android platform
         run: npx cap add android
+
+      - name: Generate Android Launcher & Adaptive Icons from assets/icon.png
+        run: node scripts/generate-icons.js
 
       - name: Fix Kotlin stdlib duplicate class conflict
         run: |
@@ -51,7 +57,7 @@ jobs:
           }
           EOF
 
-      - name: Sync web assets into Android project
+      - name: Sync web assets and Android project
         run: npx cap sync android
 
       - name: Build APK
@@ -63,6 +69,5 @@ jobs:
       - name: Upload APK as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SPECGIT-debug
+          name: specgit-debug
           path: android/app/build/outputs/apk/debug/app-debug.apk
-          

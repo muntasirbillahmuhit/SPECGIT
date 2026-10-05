@@ -426,8 +426,8 @@ export default function App() {
                 <div className="p-4 bg-gradient-to-br from-indigo-950/40 via-purple-950/20 to-neutral-900/60 rounded-xl border border-indigo-500/20 flex items-center gap-4">
                   <div className="relative group">
                     <img 
-                      src="/src/assets/images/apk_app_icon_1791229682781.jpg" 
-                      alt="Solar System APK Icon" 
+                      src="/icon-512.png" 
+                      alt="SPECGIT APK Icon" 
                       referrerPolicy="no-referrer"
                       className="w-16 h-16 rounded-2xl shadow-lg border border-white/20 object-cover shrink-0"
                     />
@@ -438,11 +438,11 @@ export default function App() {
                       <span>Android APK Icon</span>
                     </div>
                     <p className="text-[11px] text-neutral-400 mt-0.5">
-                      High-resolution 3D cosmic launcher icon for Android APK packaging.
+                      Official specgit launcher icon for Android APK packaging.
                     </p>
                     <a
-                      href="/src/assets/images/apk_app_icon_1791229682781.jpg"
-                      download="solar_system_apk_icon.jpg"
+                      href="/icon-512.png"
+                      download="specgit_icon.png"
                       className="inline-flex items-center gap-1.5 mt-2 px-2.5 py-1 bg-white/10 hover:bg-white/20 text-white rounded-lg text-[11px] font-medium transition-colors"
                     >
                       <Download className="w-3 h-3 text-neutral-300" />
