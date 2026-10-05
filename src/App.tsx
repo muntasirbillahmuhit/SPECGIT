@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentMode, setCurrentMode] = useState<'solar' | 'zero'>('zero');
+  const [currentMode, setCurrentMode] = useState<'solar' | 'zero'>('solar');
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
